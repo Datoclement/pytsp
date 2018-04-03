@@ -27,7 +27,7 @@ def validate_folder(path, required_fnames):
 
 def get_concorde_base_dir():
     v = partial(validate_folder,
-                required_fnames=['include/concorde.h', 'lib/concorde.a'])
+                required_fnames=['concorde.h', 'concorde.a'])
     # Environment variable
     concorde_dir = os.environ.get('CONCORDE_DIR')
     if concorde_dir is not None:
@@ -49,7 +49,7 @@ def get_concorde_base_dir():
 
 def get_qsopt_base_dir():
     v = partial(validate_folder,
-                required_fnames=['include/qsopt.h', 'lib/qsopt.a'])
+                required_fnames=['qsopt.h', 'qsopt.a'])
     # Environment variable
     qsopt_dir = os.environ.get('QSOPT_DIR')
     if qsopt_dir is not None:
